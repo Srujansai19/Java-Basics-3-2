@@ -1,0 +1,101 @@
+understanding java file structure and compilation process
+========================================================
+
+1. Java File Structure
+--------------------
+
+A java program is written inside a .java file and follows a specific structure.
+Example:
+
+package mypackage;
+import java.util.*;
+public class Main{
+	public static void main(String[] args){
+		System.out.println("Hello Java!");
+	}
+}
+
+
+MicroProcessor -> operating system -> jvm -> bytecode
+
+
+source code->compilation->byte code
+bytecode->jvm->Machine code
+
+
+Type Casting
+=============
+
+It converts one data type to another data type
+1)Implicit typecasting(widening)
+2)Explicit typecasting(narrowing)
+
+Type Casting
+=============
+
+It converts one data type to another data type
+1)Implicit typecasting(widening)
+2)Explicit typecasting(narrowing)
+2)Explicit
+==> Manual
+
+Naming conventions and best practices
+---------------------------------------
+1) Variable naming rules
+-creating variable
+	-use the small letters(lowercase)
+		-use camelCase
+		-start with small letter
+		-next word starting letter should be capital
+
+what is the camel case?
+- start with smallletter next word starting letter should be capital
+
+example
+
+int studentCount;
+double totalMarks;
+boolean isLoggedIn;
+
+class Student {
+    String name;
+    int age;
+    int marks;
+
+    // Constructor
+    Student(String name, int age, int marks) {
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+    }
+
+    // Display student details
+    void display() {
+        System.out.println("Name  : " + name);
+        System.out.println("Age   : " + age);
+        System.out.println("Marks : " + marks);
+        System.out.println("---------------------");
+    }
+}
+
+public class StudentInfoSystem {
+    public static void main(String[] args) {
+
+        // Creating 3 student objects
+        Student s1 = new Student("Rahul", 20, 85);
+        Student s2 = new Student("Anjali", 21, 90);
+        Student s3 = new Student("Kiran", 19, 80);
+
+        // Display student details
+        s1.display();
+        s2.display();
+        s3.display();
+
+        // Calculate average marks
+        int totalMarks = s1.marks + s2.marks + s3.marks;
+        double average = totalMarks / 3.0;
+
+        // Print average
+        System.out.println("Average Marks of Students: " + average);
+    }
+}
